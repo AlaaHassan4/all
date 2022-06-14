@@ -1,0 +1,52 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            loginButton.addEventListener("click",function () {
+                var emails = [];
+                var passwords = [];
+                for(var i =0 ; i<Users.length ;i++){
+                    emails.push(Users[i][2])
+                    passwords.push(Users[i][5])
+                }
+                console.log(emails);
+                console.log(emails.indexOf(loginEmail.value));
+                console.log(passwords);
+            
+                //user name feild
+                if(loginEmail.value == ""){
+                    loginerrorMessage.innerHTML = "!Enter your Email"
+                    loginerrorMessage.style.color = "red";
+                    loginEmail.focus();
+                }
+                else if (!emails.includes(loginEmail.value)) {
+                    loginerrorMessage.innerHTML = "!Enter correct Email"
+                    loginerrorMessage.style.color = "red";
+                }
+              //password field
+                else if(loginpassword.value == ""){
+                    loginerrorMessage.innerHTML = "!Enter your password"
+                    loginerrorMessage.style.color = "red";
+                    loginpassword.focus();
+                }
+                else if (!passwords.includes(loginpassword.value)) {
+                    loginerrorMessage.innerHTML = "!Enter correct password"
+                    loginerrorMessage.style.color = "red";
+                    loginpassword.focus();
+                }
+                else if(emails.indexOf(loginEmail.value) == passwords.indexOf(loginpassword.value)){
+                    window.open('home.html');
+                    loginerrorMessage.innerHTML = "!Welcome"
+                    loginerrorMessage.style.color = "green";
+                    localStorage.setItem("login",1)
+            
+                }
+                else{
+                    loginerrorMessage.innerHTML = "!Password or Email not correct"
+                    loginerrorMessage.style.color = "red";
+                }
+                })
+        </script>
+    </body>
+
+</html>

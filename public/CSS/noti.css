@@ -1,0 +1,423 @@
+
+/* 
+ 
+.noti.notification-container {
+  cursor: default;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  right: 10rem;
+  width: 400px;
+  font-weight: 300;
+  background: white;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  box-shadow: 0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2);
+  animation-name: dropPanel;
+  animation-iteration-count: 1;
+  animation-timing-function: all;
+  animation-duration: 0.75s;
+}
+ 
+.noti.notification-container:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: 0;
+  width: 0;
+  height: 0;
+  transform: translate(-1rem, -100%);
+  border-left: 0.75rem solid transparent;
+  border-right: 0.75rem solid transparent;
+  border-bottom: 0.75rem solid white;
+}
+ 
+.noti.notification-container h3 {
+  text-transform: uppercase;
+  font-size: 75%;
+  font-weight: 700;
+  color: #84929f;
+  padding: 1.5rem 2rem;
+}
+ 
+.noti .notification-container i {
+  color: #b5c4d2;
+  font-size: 140%;
+  @vertical-align (50%);
+  position: absolute;
+}
+ 
+.noti .notification-container i.right {
+  right: 2rem;
+}
+ 
+.noti .notification-container i.right:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+ 
+.noti .notification-container em {
+  margin-right: 0.75rem;
+  font-weight: 700;
+  font-size: 115%;
+  color: #b5c4d2;
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+@keyframes dropPanel {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px) scaleY(0.5);
+  }
+}
+ 
+.noti .notification {
+  box-sizing: border-box;
+}
+ 
+.noti .notification.new {
+  background: #f3f9fd;
+}
+
+ 
+.noti input.checkbox[type=checkbox] {
+  display: none;
+}
+ 
+.noti input.checkbox[type=checkbox] + label {
+  display: block;
+}
+ 
+.noti input.checkbox[type=checkbox]:not(:checked) + label {
+  transition: height 0.25s;
+  height: 0;
+  padding: 0;
+  font-size: 0;
+  border: none;
+} */
+
+
+@charset "UTF-8";
+@import 'https://fonts.googleapis.com/css?family=Material+Icons';
+.noti a {
+  color: cornflowerblue;
+  text-decoration: none;
+}
+.noti a:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+/* .profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.profile:after {
+  content: "";
+  top: -0.75rem;
+  bottom: -0.75rem;
+  left: 0;
+  right: -0.75rem;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+} */ 
+
+
+
+.notification-container {
+  width: 1031px;   
+  right: 430px;
+  cursor: default;
+  position: absolute;
+  z-index: 999;
+  top: 85px;
+  font-weight: 300;
+  background: white;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  box-shadow: 0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2);
+  animation-name: dropPanel;
+  animation-iteration-count: 1;
+  animation-timing-function: all;
+  animation-duration: 0.75s;
+}
+.notification-container:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: 284px;
+  width: 0;
+  height: 0;
+  transform: translate(-1rem, -100%);
+  border-left: 0.75rem solid transparent;
+  border-right: 0.75rem solid transparent;
+  border-bottom: 0.75rem solid white;
+}
+ .notification-container h3 {
+  margin-bottom: -21px;
+  text-transform: uppercase;
+  font-size: 103%;
+  font-weight: 700;
+  color: #84929f;
+  padding: 1.5rem 2rem;
+}
+ .notification-container i {
+  color: #b5c4d2;
+  font-size: 140%;
+  @vertical-align (50%);
+  position: absolute;
+}
+ .notification-container i.right {
+  right: 2rem;
+}
+ .notification-container i.right:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+ .notification-container em {
+  margin-right: 0.75rem;
+  font-weight: 700;
+  font-size: 115%;
+  color: #b5c4d2;
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+@keyframes dropPanel {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px) scaleY(0.5);
+  }
+}
+ .notification {
+  box-sizing: border-box;
+}
+ .notification.new {
+  background: #f3f9fd;
+}
+
+.noti input.checkbox[type=checkbox] {
+  display: none;
+}
+.noti input.checkbox[type=checkbox] + label {
+  display: block;
+}
+.noti input.checkbox[type=checkbox]:not(:checked) + label {
+  transition: height 0.25s;
+  height: 0;
+  padding: 0;
+  font-size: 0;
+  border: none;
+}
+.noti input.checkbox[type=checkbox]:not(:checked) + label * {
+  display: none;
+}
+.noti input.checkbox[type=checkbox]:checked + label {
+  height: 3.25rem;
+  padding: 1.125rem 4rem 0.75rem 2rem;
+  font-size: 75%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.noti .red {
+  color: #f8b2a6 !important;
+}
+
+.noti .teal {
+  color: #7fa6ec;
+}
+
+.noti .gray {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.noti .gray-bg {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.noti  .primary-button {
+  background: cornflowerblue;
+  border: 2px solid cornflowerblue;
+}
+
+.noti .secondary-button {
+  border: 2px solid #B2B9C5;
+  background: none;
+  color: #B2B9C5;
+}
+
+.noti .left {
+  margin-right: 0.75rem;
+  float: left;
+}
+
+.noti .right {
+  margin-left: 0.75rem;
+  float: right;
+}
+
+.noti spacer {
+  width: 100%;
+}
+
+.noti button {
+  float: right;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: normal;
+  padding: 8px 12px;
+  border: 0;
+  font-size: 13px;
+  line-height: 13px;
+  color: white;
+  background: #B2B9C5;
+}
+.noti button:hover {
+  opacity: 0.9;
+}
+
+ .notification-icon {
+  position: relative;
+  margin-right: 1em;
+  border-radius: 5px;
+  background: #ecf0f1;
+}
+ .notification-icon i {
+  margin: 0.5rem;
+}
+ .notification-icon:nth-of-type(1) i {
+  background: -webkit-linear-gradient(300deg, #acccea, #71306E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+ .notification-icon:nth-of-type(2) i {
+  background: -webkit-linear-gradient(300deg, #fff9ab, #00b8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+ .num-count {
+  position: absolute;
+  user-select: none;
+  cursor: default;
+  font-size: 0.6rem;
+  background: #e74c3c;
+  width: 1.2rem;
+  height: 1.2rem;
+  color: #ecf0f1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  top: -0.33rem;
+  right: -0.66rem;
+  box-sizing: border-box;
+}
+
+/* main {
+  display: flex;
+  flex-flow: row;
+  width: 90vw;
+  height: 75vh;
+  margin: 0 auto;
+  background: white;
+  border-radius: 0 0 0.5em 0.5em;
+  position: relative;
+  box-shadow: 0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2);
+} */
+
+.noti .alert {
+  width: 439px;
+  margin-right: -5px;
+  font-size: 19px;
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  margin-left: 0px;
+  height: 100px;
+}
+
+ 
+.noti .alert-success {
+  background-color: #D1E7DD;
+}
+
+ 
+.noti .alert-warning {
+  background-color: #FFF3CD;
+}
+
+ 
+.noti .alert-danger {
+  background-color: #F8D7DA;
+}
+
+.noti button:focus {
+  outline: 0;
+}
+
+.noti .close {
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 2em;
+  color: #cccccc;
+  cursor: pointer;
+}
+.noti .close:hover {
+  color: inherit;
+}
+
+.noti .btn {
+    width: 12%;
+    margin-left: 32px !important;
+    border-radius: 5px;
+    border: solid 1px #000000;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    padding: 5px;
+
+}
+
+.noti .reset {
+  background-color: transparent;
+  border: solid 3px #cccccc;
+  color: #cccccc;
+  transition: background-color 0.5s linear 0.1s;
+}
+.noti .reset:hover {
+  background-color: #cccccc;
+  color: white;
+}
+
+.noti .fnoti {
+  width: 1700px;
+  display: flex;
+}
+
+
+.noti .notiul{
+  margin-top: -21px;
+
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+
+}
