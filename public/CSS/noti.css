@@ -129,7 +129,7 @@
 
 
 .notification-container {
-  width: 1031px;   
+  width: 515px; 
   right: 430px;
   cursor: default;
   position: absolute;
@@ -379,7 +379,7 @@
 }
 
 .noti .btn {
-    width: 12%;
+  width: 24%;
     margin-left: 32px !important;
     border-radius: 5px;
     border: solid 1px #000000;
