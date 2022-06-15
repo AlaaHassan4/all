@@ -625,9 +625,8 @@ font-size: 10px;
 
 /*Start Reporting */
 .report #backre{
-
   width: 100%;
-  height: 589px;
+  height: 599px;
   background-color: #F9F9FB;
   border: 1px solid #F9F9FB;
   border-radius: 10px;
@@ -641,7 +640,7 @@ font-size: 10px;
   height: 538px;
   background-color: white;
   border: 1px solid white;
-  margin: 41px 56px 0px 56px;
+  margin: 41px 93px 0px 39px;
   border-radius: 10px;
   box-shadow: 0 0.125rem 0.5rem rgb(0 0 0 / 30%), 0 0.0625rem 0.125rem rgb(0 0 0 / 20%);
 
@@ -755,6 +754,12 @@ font-size: 23px;
 color: #8A3188;
 }
 
+
+.report #yp {
+  margin-left: 40px;
+  color: rgb(163, 75, 154);
+  margin-top: 12px;
+}
 /*End Reporting */
 
 /*Start Emergency */
